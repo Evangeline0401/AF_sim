@@ -43,8 +43,8 @@ class Defense:
 
 class App:
     def __init__(self):
-        self.IMG_ID0_X = 121
-        self.IMG_ID0_Y = 121
+        #self.IMG_ID0_X = 121
+        #self.IMG_ID0_Y = 121
         self.IMG_ID0 = 0
         self.left_click_flag = 0
 
@@ -76,10 +76,10 @@ class App:
 
     def draw(self):
         pyxel.cls(0)
-        #self.tilemap_draw()
+        self.tilemap_draw()
 
         for Off in self.Offenses:
-            pyxel.blt(Off.pos.x, Off.pos.y, Off.img_off, 16, 0, 8, 8, 0)
+            pyxel.blt(Off.pos.x, Off.pos.y, Off.img_off, 18, 10, 4, 4, 0)
     
     def tilemap_draw(self):
         base_x = 0
@@ -87,11 +87,11 @@ class App:
         tm = 0
         u = 0
         v = 0
-        w = 16
-        h = 16
+        w = 32
+        h = 32
         # 指定したtm(template)番号の(u,v)座標から
         # サイズ(w,h)の大きさを(base_x,base_y)座標に描画する
-        pyxel.bltm(base_x,base_y,tm,u,v,w,h)
+        pyxel.bltm(base_x, base_y, tm, u, v, w, h)
 
 
 App()
